@@ -11,7 +11,7 @@ from langchain.callbacks import get_openai_callback
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Ask your PDF")
+    st.set_page_config(page_title="Ask your PDF", page_icon="🩺")
     st.header("Ask your PDF 💬")
     
     # upload file
@@ -32,11 +32,12 @@ def main():
         length_function=len
       )
       chunks = text_splitter.split_text(text)
-      
+
       # create embeddings
       embeddings = OpenAIEmbeddings()
       knowledge_base = FAISS.from_texts(chunks, embeddings)
-      
+
+
       # show user input
       user_question = st.text_input("Ask a question about your PDF:")
       if user_question:
