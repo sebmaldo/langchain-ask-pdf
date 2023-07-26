@@ -16,19 +16,20 @@ The application uses Streamlit to create the GUI and Langchain to deal with the 
 To install the repository, please clone this repository and install the requirements:
 
 ```
-pip install -r requirements.txt
+make install
 ```
+
+## Configuration
 
 You will also need to add your OpenAI API key to the `.env` file.
 
 ## Usage
 
-To use the application, run the `main.py` file with the streamlit CLI (after having installed streamlit): 
+To use the application, run the app environment will be created and dependencies installed if not already done so. 
 
 ```
-streamlit run app.py
+make develop
 ```
-
 
 ## Contributing
 
